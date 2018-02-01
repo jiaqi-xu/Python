@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb2467d6-f98d-4bf3-a347-6021bd1eff93" name="Default" comment="" />
+    <list default="true" id="bb2467d6-f98d-4bf3-a347-6021bd1eff93" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phase-1/loginprogram.py" afterPath="$PROJECT_DIR$/phase-1/loginprogram.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +56,8 @@
       <file leaf-file-name="loginprogram.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/phase-1/loginprogram.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
-              <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+            <state relative-caret-position="283">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="e#23#33#0" expanded="true" />
               </folding>
@@ -124,10 +126,10 @@
         <option value="$PROJECT_DIR$/phase-1/guess_age.py" />
         <option value="$PROJECT_DIR$/phase-1/csv_module.py" />
         <option value="$PROJECT_DIR$/phase-1/wrong_input_count_log.json" />
-        <option value="$PROJECT_DIR$/phase-1/loginprogram.py" />
         <option value="$PROJECT_DIR$/phase-1/black_list.csv" />
         <option value="$PROJECT_DIR$/phase-1/users_list.csv" />
         <option value="$PROJECT_DIR$/phase-1/wrong_input_count_log.txt" />
+        <option value="$PROJECT_DIR$/phase-1/loginprogram.py" />
       </list>
     </option>
   </component>
@@ -425,8 +427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/phase-1/loginprogram.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+        <state relative-caret-position="283">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#23#33#0" expanded="true" />
           </folding>
