@@ -54,6 +54,7 @@ def fetch(backend):
 
             if line.strip().startswith('backend'):
                 flag = False
+                break
 
             if flag and line.strip():
                 fetch_list.append(line.strip())
@@ -78,32 +79,37 @@ def add(dict_info):
     record_to_insert = "server %s %s weight %s maxconn %s"%(record['server'], record['server'], record['weight'], record['maxconn'])
 
     if fetch_list:
-        # 将要新加入的记录加入对应backend的list组成新的版本
-        fetch_list.append(record_to_insert)
-        with open('config_homework.txt', 'r') as read_obj, open("new_config_homework.txt", 'w') as write_obj:
-            for line in read_obj:
-                if line.strip() == "backend %s" % backend:
-                    write_obj.write(line)
-                    flag = True
-                    continue
+        # backend存在，record也已经存在
+        if record_to_insert in fetch_list:
+            import shutil
+            shutil.copy('config_homework.txt', 'new_config_homework.txt' )#再拷贝一份
+        else:
+            # 将要新加入的记录加入对应backend的list组成新的版本
+            fetch_list.append(record_to_insert)
+            with open('config_homework.txt', 'r') as read_obj, open("new_config_homework.txt", 'w') as write_obj:
+                for line in read_obj:
+                    if line.strip() == "backend %s" % backend:
+                        write_obj.write(line)
+                        flag = True
+                        continue
 
-                if flag and line.strip().startswith("backend"):
-                    flag = False
+                    if flag and line.strip().startswith("backend"):
+                        flag = False
 
-                if flag:
-                    if not has_written:
-                        backend_record_count = len(fetch_list)
-                        for index in range(backend_record_count):
-                            temp = '%s%s' % (' ' * 8, fetch_list[index])
-                            if index == backend_record_count - 1:
-                                write_obj.write("\n" + temp + "\n\n")
-                            elif index == 0:
-                                write_obj.write(temp + '\n')
-                            else:
-                                write_obj.write('\n' + temp + "\n")
-                        has_written = True
-                else:
-                    write_obj.write(line)
+                    if flag:
+                        if not has_written:
+                            backend_record_count = len(fetch_list)
+                            for index in range(backend_record_count):
+                                temp = '%s%s' % (' ' * 8, fetch_list[index])
+                                if index == backend_record_count - 1:
+                                    write_obj.write("\n" + temp + "\n\n")
+                                elif index == 0:
+                                    write_obj.write(temp + '\n')
+                                else:
+                                    write_obj.write('\n' + temp + "\n")
+                            has_written = True
+                    else:
+                        write_obj.write(line)
     else: # 如果原来backend不存在，则直接加到配置文件的最后
         with open('config_homework.txt', 'r') as read_obj, open("new_config_homework.txt", 'w') as write_obj:
             for line in read_obj:
