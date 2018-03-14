@@ -1,0 +1,17 @@
+INFO:root:So should this
+WARNING:root:And this, too
+03/11/2018 05:20:13 PM So should this
+03/11/2018 05:20:13 PM And this, too
+03/11/2018 05:20:25 PM So should this
+03/11/2018 05:20:25 PM And this, too
+%(message)
+%(message)
+03/11/2018 05:21:14 PM So should this
+03/11/2018 05:21:14 PM And this, too
+03/12/2018 07:47:25 PM So should this
+03/12/2018 07:47:25 PM And this, too
+03/12/2018 07:47:25 PM debug message
+03/12/2018 07:47:25 PM info message
+03/12/2018 07:47:25 PM warn message
+03/12/2018 07:47:25 PM error message
+03/12/2018 07:47:25 PM critical message
