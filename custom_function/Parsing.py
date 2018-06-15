@@ -80,7 +80,8 @@ def check_availability(avail):
             return a
 
         try:
-            return int(a) > 0
+            if int(float(a)) == float(a):
+                return int(float(a)) > 0
         except (ValueError, TypeError):
             pass
 
