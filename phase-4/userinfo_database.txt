@@ -1,0 +1,3 @@
+Username|Password|Email|Phone|User_level
+jqx|123456|jxu033@uottawa.ca|6132618851|2
+zhang san|111111|zhangsan@gmail.com|110|1

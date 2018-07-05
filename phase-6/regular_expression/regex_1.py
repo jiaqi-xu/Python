@@ -49,6 +49,8 @@ abcabca456c
 匹配空白字符、\t、\n、\r, re.search("\s+", "ab\tc1\n3").group()
 结果
 '\t'
+\b	匹配一个单词边界，也就是指单词和空格间的位置。例如，“er\b”可以匹配“never”中的“er”，但不能匹配“verb”中的“er”。
+\B	匹配非单词边界。“er\B”能匹配“verb”中的“er”，但不能匹配“never”中的“er”。
 
 '(?P<name>...)'
 分组匹配
@@ -57,3 +59,4 @@ re.search("(?P<province>[0-9]{4})(?P<city>[0-9]{2})(?P<birthday>[0-9]{4})",
 结果
 {'province': '3714', 'city': '81', 'birthday': '1993'}
 '''
+
